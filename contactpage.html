@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Astrolink</title>
+
+  <!-- Google Fonts & AOS -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    :root {
+      --primary-color: #4e9af1;
+      --bg-dark: #121212;
+      --text-light: #ffffff;
+      --light-bg: #f2f2f2;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--light-bg);
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    .hero {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero h1 {
+      position: relative;
+      color: #fff;
+      font-size: 3rem;
+      z-index: 1;
+      text-shadow: 2px 2px 5px #000;
+      animation: fadeInDown 2s ease-out forwards;
+    }
+
+    @keyframes fadeInDown {
+      0% { transform: translateY(-50px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    .contact-section {
+      padding: 80px 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .contact-section h2 {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 20px;
+      animation: fadeUp 1.5s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 15px;
+      font-size: 1rem;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: var(--primary-color);
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 150px;
+    }
+
+    .contact-form button {
+      background: var(--primary-color);
+      color: #fff;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1rem;
+      box-shadow: 0 0 15px rgba(0, 162, 255, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background: #0079ce;
+      box-shadow: 0 0 25px rgba(0, 162, 255, 0.6);
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.2rem; }
+    }
+     /* === FOOTER === */
+    footer {
+      background: #000;
+      color: #fff;
+      padding: 40px;
+      text-align: center;
+    }
+
+    /* === LIGHT THEME === */
+    body.light {
+      background: #fff;
+      color: #000;
+    }
+    body.light header, body.light footer {
+      background: #f1f1f1;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Image Section -->
+  <section class="hero">
+    <h1>Let’s Get In Touch</h1>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="contact-section" data-aos="fade-up">
+    <h2>Contact Us</h2>
+    <form class="contact-form" data-aos="fade-up" data-aos-delay="200">
+      <input type="text" placeholder="Your Full Name" required>
+      <input type="email" placeholder="Your Email Address" required>
+      <input type="text" placeholder="Subject" required>
+      <textarea placeholder="Write your message..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+  <!--footer-->
+  <footer>
+    <p>© 2025 NextGen Code School | Adress- Panipat, Haryana</p>
+  </footer>
+
+  <!-- AOS Library -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1200 });
+  </script>
+</body>
+</html>
